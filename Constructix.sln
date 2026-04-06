@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4D77AF42-0D4E-40D2-ABDF-25E3D2B7C9DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{5553296C-2914-4416-B933-E578C7E7B2F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{A1A58950-8224-420D-9137-86EE58817781}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constructix.Domain", "src\Core\Constructix.Domain\Constructix.Domain.csproj", "{10B4F9CB-3017-AA3B-0902-CEDCA4273D81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constructix.Application", "src\Core\Constructix.Application\Constructix.Application.csproj", "{CB2073A2-387A-AC41-20DA-2CDB79138BF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constructix.Infrastructure", "src\Infrastructure\Constructix.Infrastructure\Constructix.Infrastructure.csproj", "{C1FE040A-E18B-248F-D26A-58098CB6AD7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constructix.Persistence", "src\Infrastructure\Constructix.Persistence\Constructix.Persistence.csproj", "{067404BF-8871-081F-0DC3-3A261B87C772}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constructix.WebAPI", "src\Presentation\Constructix.WebAPI\Constructix.WebAPI.csproj", "{C84A0938-3016-085F-DF28-ACBF7B0C6486}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{2EFB8CB8-2D60-4194-8BC8-696D579DC39E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constructix.UnitTests", "test\Constructix.UnitTests\Constructix.UnitTests.csproj", "{89D18B4D-EE4B-4BB4-9567-B413A9423104}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constructix.IntegrationTests", "test\Constructix.IntegrationTests\Constructix.IntegrationTests.csproj", "{7A0BD1C4-15C6-4E29-8FE3-66827FFF52F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10B4F9CB-3017-AA3B-0902-CEDCA4273D81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10B4F9CB-3017-AA3B-0902-CEDCA4273D81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10B4F9CB-3017-AA3B-0902-CEDCA4273D81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10B4F9CB-3017-AA3B-0902-CEDCA4273D81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB2073A2-387A-AC41-20DA-2CDB79138BF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB2073A2-387A-AC41-20DA-2CDB79138BF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB2073A2-387A-AC41-20DA-2CDB79138BF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB2073A2-387A-AC41-20DA-2CDB79138BF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1FE040A-E18B-248F-D26A-58098CB6AD7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1FE040A-E18B-248F-D26A-58098CB6AD7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1FE040A-E18B-248F-D26A-58098CB6AD7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1FE040A-E18B-248F-D26A-58098CB6AD7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{067404BF-8871-081F-0DC3-3A261B87C772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{067404BF-8871-081F-0DC3-3A261B87C772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{067404BF-8871-081F-0DC3-3A261B87C772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{067404BF-8871-081F-0DC3-3A261B87C772}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C84A0938-3016-085F-DF28-ACBF7B0C6486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C84A0938-3016-085F-DF28-ACBF7B0C6486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C84A0938-3016-085F-DF28-ACBF7B0C6486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C84A0938-3016-085F-DF28-ACBF7B0C6486}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89D18B4D-EE4B-4BB4-9567-B413A9423104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89D18B4D-EE4B-4BB4-9567-B413A9423104}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89D18B4D-EE4B-4BB4-9567-B413A9423104}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89D18B4D-EE4B-4BB4-9567-B413A9423104}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A0BD1C4-15C6-4E29-8FE3-66827FFF52F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A0BD1C4-15C6-4E29-8FE3-66827FFF52F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A0BD1C4-15C6-4E29-8FE3-66827FFF52F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A0BD1C4-15C6-4E29-8FE3-66827FFF52F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {4D77AF42-0D4E-40D2-ABDF-25E3D2B7C9DE}
+		{5553296C-2914-4416-B933-E578C7E7B2F2} = {4D77AF42-0D4E-40D2-ABDF-25E3D2B7C9DE}
+		{A1A58950-8224-420D-9137-86EE58817781} = {4D77AF42-0D4E-40D2-ABDF-25E3D2B7C9DE}
+		{10B4F9CB-3017-AA3B-0902-CEDCA4273D81} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{CB2073A2-387A-AC41-20DA-2CDB79138BF9} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{C1FE040A-E18B-248F-D26A-58098CB6AD7E} = {5553296C-2914-4416-B933-E578C7E7B2F2}
+		{067404BF-8871-081F-0DC3-3A261B87C772} = {5553296C-2914-4416-B933-E578C7E7B2F2}
+		{C84A0938-3016-085F-DF28-ACBF7B0C6486} = {A1A58950-8224-420D-9137-86EE58817781}
+		{89D18B4D-EE4B-4BB4-9567-B413A9423104} = {2EFB8CB8-2D60-4194-8BC8-696D579DC39E}
+		{7A0BD1C4-15C6-4E29-8FE3-66827FFF52F1} = {2EFB8CB8-2D60-4194-8BC8-696D579DC39E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28D60602-1B37-41CD-B0F5-833F88AA4C65}
+	EndGlobalSection
+EndGlobal
