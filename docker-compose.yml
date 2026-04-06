@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   constructix_db:
     image: postgres:latest
@@ -11,7 +9,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - constructix_postgres_data:/var/lib/postgresql
     networks:
       - constructix_network
     restart: always
@@ -35,4 +33,4 @@ networks:
     driver: bridge
 
 volumes:
-  postgres_data:
+  constructix_postgres_data:

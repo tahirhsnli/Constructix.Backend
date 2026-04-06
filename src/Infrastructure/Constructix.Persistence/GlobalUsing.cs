@@ -1,0 +1,11 @@
+﻿global using Constructix.Domain.Common;
+global using Constructix.Domain.Entities;
+global using Constructix.Persistence.Contexts;
+global using Constructix.Persistence.Interceptors;
+global using System.Reflection;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.EntityFrameworkCore.Design;
+global using Microsoft.EntityFrameworkCore.Diagnostics;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
