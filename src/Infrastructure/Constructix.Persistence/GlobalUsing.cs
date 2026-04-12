@@ -1,7 +1,15 @@
-﻿global using Constructix.Domain.Common;
+﻿// Domain usings
+global using Constructix.Domain.Common;
 global using Constructix.Domain.Entities;
+// Application usings
+global using Constructix.Application.Common.Interfaces.Repositories;
+global using Constructix.Application.Common.Interfaces.Repositories.Building;
+// Persistence usings
 global using Constructix.Persistence.Contexts;
 global using Constructix.Persistence.Interceptors;
+global using Constructix.Persistence.Repositories;
+global using Constructix.Persistence.Repositories.Building;
+
 global using System.Reflection;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.Extensions.Configuration;

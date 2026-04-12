@@ -23,7 +23,7 @@ public static class Guard
     }
 
     // 4. Sıfır və ya mənfi yoxlaması (int/double/decimal üçün istifadə oluna bilər)
-    public static void AgainstZeroOrNegative(double value, string name)
+    public static void AgainstZeroOrNegative(decimal value, string name)
     {
         if (value <= 0)
             throw new ArgumentOutOfRangeException(name, $"{name} sıfır və ya mənfi ola bilməz.");

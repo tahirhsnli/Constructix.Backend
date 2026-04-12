@@ -6,6 +6,11 @@ public static class ServiceRegistration
         // 1. Öncə Interceptor-u qeydiyyatdan keçiririk
         services.AddScoped<AuditInterceptor>();
 
+        // Repositories
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddScoped<IBuildingReadRepository,BuildingReadRepository>();
+        services.AddScoped<IBuildingWriteRepository,BuildingWriteRepository>();
+
         // 2. DbContext konfiqurasiyası
         services.AddDbContext<ApplicationDbContext>((sp, options) =>
         {

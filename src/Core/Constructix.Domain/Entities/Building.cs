@@ -1,5 +1,4 @@
-﻿
-namespace Constructix.Domain.Entities;
+﻿namespace Constructix.Domain.Entities;
 public sealed class Building : BaseEntity // <-- 1. Bünövrəni götürdü
 {
     // Property-lər 'private set'dir - kənardan (məsələn, Controller-dən) dəyişdirilə bilməz
@@ -14,12 +13,15 @@ public sealed class Building : BaseEntity // <-- 1. Bünövrəni götürdü
     private Building() { }
 
     // 3. Constructor: Binanı yaratmağın tək yolu budur
-    public Building(string name, Address address, int totalFloors, decimal totalArea)
+    public Building(string name, string? description, Address address, int totalFloors, decimal totalArea)
     {
         // 4. Guard: Yanlış məlumatla bina yaradılmasın
         Guard.AgainstNullOrEmpty(name, nameof(Name));
+        Guard.AgainstZeroOrNegative(totalFloors, nameof(TotalFloors));
+        Guard.AgainstZeroOrNegative(totalArea, nameof(TotalArea));
 
         Name = name;
+        Description = description;
         Address = address;
         TotalFloors = totalFloors;
         TotalArea = totalArea;

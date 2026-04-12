@@ -20,8 +20,4 @@
     <ProjectReference Include="..\..\Infrastructure\Constructix.Persistence\Constructix.Persistence.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>

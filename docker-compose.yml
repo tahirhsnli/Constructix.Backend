@@ -1,4 +1,21 @@
 services:
+  # 1. API
+  constructix_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: constructix_api
+    ports:
+      - "5000:8080" # Brauzer localhost:5000 
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=constructix_db;Database=${POSTGRES_DB};Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}
+    depends_on:
+      - constructix_db
+    networks:
+      - constructix_network
+    restart: always
+
+  # 2. Database
   constructix_db:
     image: postgres:latest
     container_name: constructix_db
@@ -7,13 +24,14 @@ services:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - POSTGRES_DB=${POSTGRES_DB}
     ports:
-      - "5432:5432"
+      - "5435:5432"
     volumes:
-      - constructix_postgres_data:/var/lib/postgresql
+      - constructix_db_new_volume:/var/lib/postgresql
     networks:
       - constructix_network
     restart: always
 
+  # 3. Database (PGADMIN)
   pgadmin:
     image: dpage/pgadmin4
     container_name: constructix_pgadmin
@@ -33,4 +51,4 @@ networks:
     driver: bridge
 
 volumes:
-  constructix_postgres_data:
+  constructix_db_new_volume:
