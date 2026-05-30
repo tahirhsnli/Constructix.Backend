@@ -1,4 +1,10 @@
-﻿namespace Constructix.Persistence;
+﻿using Constructix.Application.Abstractions.Services;
+using Constructix.Persistence.Services;
+
+using Microsoft.AspNetCore.Identity;
+
+namespace Constructix.Persistence;
+
 public static class ServiceRegistration
 {
     public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
@@ -10,6 +16,8 @@ public static class ServiceRegistration
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IBuildingReadRepository,BuildingReadRepository>();
         services.AddScoped<IBuildingWriteRepository,BuildingWriteRepository>();
+
+        services.AddScoped<IAuthService, AuthService>();
 
         // 2. DbContext konfiqurasiyası
         services.AddDbContext<ApplicationDbContext>((sp, options) =>

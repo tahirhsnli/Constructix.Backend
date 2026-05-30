@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-using Constructix.Application.Common.Behaviors;
+using Constructix.Application.Behaviors;
 
 using Microsoft.Extensions.DependencyInjection;
 

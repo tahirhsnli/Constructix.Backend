@@ -1,4 +1,4 @@
-﻿namespace Constructix.Application.Common.Behaviors;
+﻿namespace Constructix.Application.Behaviors;
 public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : IRequest<TResponse>
 {

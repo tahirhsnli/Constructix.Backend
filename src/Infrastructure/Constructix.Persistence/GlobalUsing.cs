@@ -1,9 +1,11 @@
 ﻿// Domain usings
 global using Constructix.Domain.Common;
 global using Constructix.Domain.Entities;
+global using Constructix.Domain.Entities.Identity;
+
 // Application usings
-global using Constructix.Application.Common.Interfaces.Repositories;
-global using Constructix.Application.Common.Interfaces.Repositories.Building;
+global using Constructix.Application.Abstractions.Repositories;
+global using Constructix.Application.Abstractions.Repositories.Building;
 // Persistence usings
 global using Constructix.Persistence.Contexts;
 global using Constructix.Persistence.Interceptors;

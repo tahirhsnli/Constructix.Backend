@@ -1,4 +1,4 @@
-﻿namespace Constructix.Application.Common.Interfaces.Repositories.Building;
+﻿namespace Constructix.Application.Abstractions.Repositories.Building;
 
 public interface IBuildingReadRepository
 {

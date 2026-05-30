@@ -8,9 +8,15 @@ services:
     ports:
       - "5000:8080" # Brauzer localhost:5000 
     environment:
+      # PostgreSql baglantisi ucun
       - ConnectionStrings__DefaultConnection=Host=constructix_db;Database=${POSTGRES_DB};Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}
+      # Redis baglantisi (Konteyner adi ile)
+      - ConnectionStrings__Redis=${REDIS_HOST}:${REDIS_PORT},password=${REDIS_PASSWORD}
+      # JWT secret keyini buradan oxuyacaq
+      - JwtSettings__SecretKey=${JWT_SECRET_KEY}
     depends_on:
       - constructix_db
+      - constructix_redis
     networks:
       - constructix_network
     restart: always
@@ -45,6 +51,29 @@ services:
     networks:
       - constructix_network
     restart: always
+  # 4. Redis
+  constructix_redis:
+    image: redis:7.0-alpine
+    container_name: constructix_redis
+    # Sifreni burada aktiv edirik:
+    command: redis-server --requirepass ${REDIS_PASSWORD}
+    ports:
+      - "6379:6379"
+    volumes:
+      - constructix_redis_data:/data
+    networks:
+      - constructix_network
+    restart: always
+
+  # 5. Redis Insight (Vizual idareetme ucun)
+  redis-insight:
+    image: redislabs/redisinsight:latest
+    container_name: constructix_redis_insight
+    ports:
+      - "8001:8001"
+    networks:
+      - constructix_network
+    restart: always
 
 networks:
   constructix_network:
@@ -52,3 +81,4 @@ networks:
 
 volumes:
   constructix_db_new_volume:
+  constructix_redis_data:

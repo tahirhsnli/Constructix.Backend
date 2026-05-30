@@ -1,4 +1,5 @@
-﻿using Constructix.Application.Common.Interfaces.Repositories.Building;
+﻿using Constructix.Application.Abstractions.Repositories;
+using Constructix.Application.Abstractions.Repositories.Building;
 
 namespace Constructix.Application.Features.Buildings.Commands.CreateBuilding;
 

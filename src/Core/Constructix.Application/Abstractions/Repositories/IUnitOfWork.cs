@@ -1,6 +1,6 @@
-﻿using Constructix.Application.Common.Interfaces.Repositories.Building;
+﻿using Constructix.Application.Abstractions.Repositories.Building;
 
-namespace Constructix.Application.Common.Interfaces.Repositories;
+namespace Constructix.Application.Abstractions.Repositories;
 public interface IUnitOfWork : IDisposable
 {
     IBuildingWriteRepository Buildings { get; }
